@@ -40,6 +40,7 @@ call plug#begin('~/.vim/plugged')
     	Plug 'leafgarland/typescript-vim'
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'morhetz/gruvbox'
+        Plug 'vim-latex/vim-latex'
 
 call plug#end()
 
