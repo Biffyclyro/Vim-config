@@ -41,6 +41,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'morhetz/gruvbox'
         Plug 'vim-latex/vim-latex'
+        Plug 'rhysd/vim-grammarous'
+        
 
 call plug#end()
 
