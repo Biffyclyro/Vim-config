@@ -15,6 +15,8 @@ set nobackup
 
 set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
 
+""" set colorcolumn=80
+
 let mapleader=' '
 
 if !isdirectory($HOME . '/.vim/undodir')
@@ -42,12 +44,15 @@ call plug#begin('~/.vim/plugged')
         Plug 'morhetz/gruvbox'
         Plug 'vim-latex/vim-latex'
         Plug 'rhysd/vim-grammarous'
-        
+        Plug 'preservim/nerdtree'
+        Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
+autocmd ColorScheme * highlight Normal ctermbg=None
+autocmd ColorScheme * highlight NonText ctermbg=None
+colorscheme dracula 
 set background=dark
-colorscheme industry 
 "let g:gruvbox_contrast_dark='hard'
 
 
@@ -208,3 +213,4 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+autocmd vimenter * NERDTree
